@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Simple login</title>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Slab">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">  </script>
+        <style>
+            body {
+                font-family: "Josefin Slab";
+                font-size: 35px;
+                color: #cc9900;
+                background-color: #00ff99;
+            }
+            .class1 {
+                width:200px;
+                height:30px; 
+                border-radius: 60px;
+                background-color: #ff3300;
+                color: white;
+                font-size:20px;
+            }
+            table {
+                font-weight: bold;
+                font-size: 25px;
+            }
+            p{
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Username : user , password : password</h1>
+            <p>Login below</p>
+            <table>
+                <form action="/login" method="post">
+                    <tr>
+                        <td>Username: </td>
+                        <td><input type="text" name="username" id="user" /></td>
+                    </tr>
+                    <tr>
+                        <td>Password: </td>
+                        <td><input type="password" name="pwd" id="password" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit"  name="Login" value="Login" id="submit" class="class1"/>
+                    </tr>
+                </form>
+            </table>
+        </center>
+    </body>
+</html>
