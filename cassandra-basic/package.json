@@ -1,0 +1,30 @@
+{
+  "name": "cassandra-basic",
+  "version": "1.0.0",
+  "description": "trying basic db operations using cassandra database ",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "cassandra"
+  ],
+  "author": "Aravind",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.4",
+    "body-parser": "^1.15.2",
+    "cassandra-driver": "^3.1.6",
+    "crypto": "0.0.3",
+    "express": "^4.14.0",
+    "express-cassandra": "^1.5.0",
+    "express-session": "^1.14.2",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "util": "^0.10.3"
+  }
+}
