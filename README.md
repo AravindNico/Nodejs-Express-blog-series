@@ -4,13 +4,12 @@ You might wonder why I’m writing a Node.js tutorial blog which is already avai
 Let me introduce myself first. I’m Aravind, IoT Application developer and I’m completely new to this Node.js world, I started with Node.js for creating a dashboard application which provides monitoring of sensor data and data visualization. When I started, I found lots of information about Node.js, but it can be difficult for beginners to find good, step-by-step information on how to get started. So I planned to compile all my study works into a blog series where it will be useful for any beginners to kickstart with Node.js to build a complete web application step by step.
 
 This tutorial series covers:
-
-    Getting started with Node.js
-    Getting started with Express.js
-    How to make AJAX requests using node/express.js
-    Simple Express application with Cassandra database along with session handling.
-    Creating REST API using node/express.js with Cassandra database.
-    Node/express.js application over HTTPS
-    Node application with NGINX
+    1.Getting started with Node.js
+    2.Getting started with Express.js
+    3.How to make AJAX requests using node / express.js
+    4.Simple Express application with Cassandra database along with session handling.
+    5.Creating REST API using node / express.js with Cassandra database.
+    6.Node / express.js application over HTTPS
+    7.Node application with NGINX
 
 This tutorial series answers the questions that can bog down a typical newbie developer and explains how to get started from the very beginning.
