@@ -17,11 +17,6 @@ USE booklist;
 
 CREATE TABLE books(id text, bookname text, authorname text, price text,PRIMARY KEY(id));
 
-// To list all the books available in the bookcatalog
-// ========================================================
-
-SELECT * FROM books;
-
 // Adding books to the book store (sample book catalog - book list)
 // =================================================================
 
@@ -33,3 +28,7 @@ INSERT INTO books(id, bookname, authorname, price) VALUES('5','Thirukural', 'Thi
 INSERT INTO books(id, bookname, authorname, price) VALUES('6','Hamlet', 'William Shakespeare', '2000');
 INSERT INTO books(id, bookname, authorname, price) VALUES('7','My passion', 'Aravind', '3000');
 
+// To list all the books available in the bookcatalog
+// ========================================================
+
+SELECT * FROM books;
