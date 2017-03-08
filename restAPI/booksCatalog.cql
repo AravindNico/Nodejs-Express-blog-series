@@ -17,12 +17,12 @@ USE booklist;
 
 CREATE TABLE books(id text, bookname text, authorname text, price text,PRIMARY KEY(id));
 
-// To list all the books available in the bookstore
+// To list all the books available in the bookcatalog
 // ========================================================
 
 SELECT * FROM books;
 
-// Adding books to the book store (sample book store - book list)
+// Adding books to the book store (sample book catalog - book list)
 // =================================================================
 
 INSERT INTO books(id, bookname, authorname, price) VALUES('1','Harry potter', 'Rowling jk', '500');
@@ -32,16 +32,4 @@ INSERT INTO books(id, bookname, authorname, price) VALUES('4','Game Of Thrones',
 INSERT INTO books(id, bookname, authorname, price) VALUES('5','Thirukural', 'Thiruvalluvar', '3000');
 INSERT INTO books(id, bookname, authorname, price) VALUES('6','Hamlet', 'William Shakespeare', '2000');
 INSERT INTO books(id, bookname, authorname, price) VALUES('7','My passion', 'Aravind', '3000');
-
-
-// Updating/modifying any book 
-// ==============================
-
-UPDATE books SET bookname='Journey to Center of the Earth',authorname='Aravind' WHERE id='7';
-
-
-// Deleting book from bookstore db
-// =================================
-
-DELETE FROM books WHERE id='7';
 
