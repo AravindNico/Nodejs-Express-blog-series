@@ -1,0 +1,45 @@
+server {
+	listen 80;
+	listen [::]:80 default_server ipv6only=on;
+    return 301 https://$host$request_uri;
+}
+
+server {
+	listen 443;
+	server_name 127.0.0.1;
+
+	ssl on;
+	ssl_certificate /Nodejs-Express-blog-series/nginxApp/nodeApp/keys/server.crt;
+	ssl_certificate_key /Nodejs-Express-blog-series/nginxApp/nodeApp/keys/server.key;
+
+	ssl_session_timeout 5m;
+
+	ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+	ssl_ciphers "HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES";
+	ssl_prefer_server_ciphers on;
+
+	location ~ ^/(assets/|images/|img/|javascript/|js/|css/|style/|flash/|media/|static/|robots.txt|humans.txt|favicon.ico){
+		root /Nodejs-Express-blog-series/nginxApp/nodeApp/public/;
+		access_log on;
+		error_log on;
+		expires 5m;
+	}
+	
+
+	location = /favicon.ico {
+  		log_not_found off;
+	}
+
+	location / {
+		proxy_set_header X-Real-IP $remote_addr;
+    	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    	proxy_set_header Host $http_host;
+    	proxy_set_header X-NginX-Proxy true;
+    	proxy_pass http://127.0.0.1:3000;
+    	proxy_http_version 1.1;
+    	proxy_set_header   X-Forwarded-Proto https;
+        proxy_ssl_session_reuse off;
+        proxy_cache_bypass $http_upgrade;
+        proxy_redirect off;
+	}
+}
